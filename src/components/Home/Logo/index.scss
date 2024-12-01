@@ -1,0 +1,38 @@
+.logo-container {
+  z-index: 0;
+  width: 400px; /* Adjust width if needed */
+  height: 400px; /* Make it a square for better alignment */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: auto;
+  margin: auto;
+
+  svg {
+    width: 100%;
+    height: auto;
+    transform: rotateZ(0deg) !important; /* Align rotation to solid logo */
+    position: absolute; /* Ensure it's aligned like the solid logo */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place the outline above the background */
+  }
+
+  .solid-logo {
+    position: absolute;
+    top: 0; /* Center both top and left */
+    left: 0;
+    margin: auto;
+    width: 100%; /* Ensure it's scaled the same as SVG */
+    height: auto;
+    transform: rotateZ(30deg) !important; /* Align rotation to solid logo */
+    z-index: 2; /* Keep it above the SVG outline */
+  }
+}
+
+.svg-container {
+  stroke: #ffd700; /* Outline color (optional) */
+  stroke-width: 0; /* Adjust thickness to match solid logo */
+}
